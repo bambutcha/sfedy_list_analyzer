@@ -9,7 +9,7 @@ class UniversityApplicationSystem:
         self.data_manager = DataManager()
 
     def run(self):
-        student_snils = input("Введите СНИЛС студента: ")
+        student_snils = input("Приветствую! Я бот, который поможет тебе отслеживать свою позицию в конкурсных списках на поступление в ВУЗ.\n\nДля начала, пожалуйста, введи свой СНИЛС: ")
         self.program_options.display_program_options()
         program_choice = self.program_options.get_program_choice()
         self.main_menu.display_menu()
