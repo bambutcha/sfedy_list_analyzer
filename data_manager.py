@@ -27,4 +27,13 @@ class DataManager:
 
     def format_student_data(self, student_data: list) -> str:
         highest_priority = student_data[17] if student_data[17] else '🚫'
-        return f"Ваше место: {student_data[0]}. СНИЛС: {student_data[1]}. Приоритет специальности: {student_data[2]}. Сумма баллов: {student_data[7]}. Все направления: {student_data[15]}. Высший приоритет: {highest_priority}. Ваше место по приоритету: {student_data[18]}."
+        return f"""
+----------------------------
+Место в списке: {student_data[0]}
+Место по приоритету: {student_data[-2]}
+Приоритет специальности: {student_data[2]}
+Сумма баллов: {student_data[7]}
+Высший приоритет: {highest_priority}
+Количество бюджетных мест: {student_data[-1]}
+----------------------------
+"""
