@@ -13,15 +13,21 @@ class DataManager:
     def get_student_data(self, program_index: int, student_snils: str) -> list:
         response = requests.get(self.program_urls[program_index])
         soup = bSoup(response.text, 'html.parser')
-        table_cells = soup.find_all('td')
-        table_data = [cell.text for cell in table_cells]
-        application_count = 0
-        for i in range(0, len(table_data)-1):
-            if table_data[i] == student_snils:
-                student_data = table_data[i-1:i+17]
-                student_data.append(application_count)
-                return student_data
-            elif table_data[i] == '✓':
+        table = soup.find('table')
+
+        table_data = []
+        for row in table.find_all('tr'):
+            cells = row.find_all(['td', 'th'])
+            row_data = [cell.get_text(strip=True) for cell in cells]
+            table_data.append(row_data)
+
+
+        places = table_data[10][0].split()[-1].strip('.')
+        application_count = 1
+        for student_data in table_data:
+            if student_data[1] == student_snils:
+                return student_data+[application_count,places]
+            elif student_data[-3] == '✓':
                 application_count += 1
         return None
 
