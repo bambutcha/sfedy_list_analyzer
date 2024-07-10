@@ -1,7 +1,7 @@
-from program_options import ProgramOptions
-from menu import MainMenu
-from validation_snils import ValidationSnils
-from data_manager import DataManager
+from App.program_options import ProgramOptions
+from App.menu import MainMenu
+from App.validation_snils import ValidationSnils
+from App.data_manager import DataManager
 
 class UniversityApplicationSystem:
     def __init__(self):
