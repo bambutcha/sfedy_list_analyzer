@@ -40,4 +40,6 @@
   <img src="https://contrib.rocks/image?repo=bambutcha/sfedy_list_analyzer" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
+Made with [contrib.rocks](https://contrib.rocks)
+
+Screamer's Author [GitHub](https://github.com/Parad1st)
