@@ -43,8 +43,8 @@
 
 ## Contributors ✨
 
-<a href="https://github.com/bambutcha/sfedy_list_monitoring/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=bambutcha/sfedy_list_monitoring" />
+<a href="https://github.com/bambutcha/sfedy_list_analyzer/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bambutcha/sfedy_list_analyzer" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
